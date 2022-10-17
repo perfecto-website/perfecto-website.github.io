@@ -26,24 +26,6 @@ h4 {
     font-size: 20px;
     font-family: cursive;
 }
-p1 {
-    color: #ffffff;
-    0, 0, 128
-}
-p2 {
-    color: #ffffff;
-}
-p8 {
-    color: #a0a0a0;
-    text-align: right;
-}
-li {
-  color: rgb(255, 255, 255);
-}
-p {
-    color: rgb(40, 40, 40);
-    text-align: right;
-}
 h3 {
     text-align: center;
     font-family: Gill Sans, sans-serif;
@@ -65,89 +47,7 @@ a1 {
   width: 4px;
   align-items: center;
 }
-@keyframes flag {
-  0% {transform:translate(0, -1px)}
-  50% {transform:translate(0, 1px)}
-  100% {transform:translate(0, -1px)}
-}
 aside, main {
     width: 50%;
     float: left;
 }
-aside img {
-    display: block;
-    width: 60%;
-    margin: 0 auto;
-}
-footer p {
-    color:  #fff;
-    text-align: center;
-}
-
-a.button1 {
-    font-weight: 700;
-    color: rgb(0, 43, 255);
-    text-decoration: none;
-    font-family: cursive, sans-serif;
-    padding: .8em 1em calc(.8em + 3px);
-    border-radius: 3px;
-    background: rgb(44, 44, 44);
-    box-shadow: 0 -3px rgb(0, 43, 255 ) inset;
-    transition: 0.2s;
-  }
-  a.button7:hover { background: rgb(46, 46, 46); }
-  a.button7:active {
-    background: rgb(53, 53, 53);
-    box-shadow: 0 3px rgb(53, 53, 53) inset;
-  }
-
-  a.button2 {
-    font-weight: 700;
-    color: rgb(234, 0, 255);
-    font-family: cursive, sans-serif;
-    text-decoration: none;
-    padding: .8em 1em calc(.8em + 3px);
-    border-radius: 3px;
-    background: rgb(44, 44, 44);
-    box-shadow: 0 -3px rgb(234, 0, 255) inset;
-    transition: 0.2s;
-  }
-  a.button7:hover { background: rgb(46, 46, 46); }
-  a.button7:active {
-    background: rgb(53, 53, 53);
-    box-shadow: 0 3px rgb(53, 53, 53) inset;
-  }
-
-  a.button3 {
-    font-weight: 700;
-    color: rgb(0, 255, 136);
-    text-decoration: none;
-    font-family: cursive, sans-serif;
-    padding: .8em 1em calc(.8em + 3px);
-    border-radius: 3px;
-    background: rgb(44, 44, 44);
-    box-shadow: 0 -3px rgb(0, 255, 136) inset;
-    transition: 0.2s;
-  }
-  a.button7:hover { background: rgb(46, 46, 46); }
-  a.button7:active {
-    background: rgb(53, 53, 53);
-    box-shadow: 0 3px rgb(53, 53, 53) inset;
-  }
-
-  a.button4 {
-    font-weight: 700;
-    color: rgb(255, 238, 0);
-    text-decoration: none;
-    font-family: cursive, sans-serif;
-    padding: .8em 1em calc(.8em + 3px);
-    border-radius: 3px;
-    background: rgb(44, 44, 44);
-    box-shadow: 0 -3px rgb(255, 238, 0) inset;
-    transition: 0.2s;
-  }
-  a.button7:hover { background: rgb(46, 46, 46); }
-  a.button7:active {
-    background: rgb(53, 53, 53);
-    box-shadow: 0 3px rgb(53, 53, 53) inset;
-  }
