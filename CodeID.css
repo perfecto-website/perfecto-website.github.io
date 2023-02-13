@@ -1,0 +1,56 @@
+body{
+    background: rgb(32, 32, 32);
+    padding: 0;
+    margin: 0;
+    font-family: Tahoma, serif;
+}
+header, footer{
+    background: rgb(32, 32, 32);
+    padding: 105px 0;
+}
+h3 {
+    text-align: center;
+    font-family: Gill Sans, sans-serif;
+    font-variant: small-caps
+}
+div {
+    width: 750px;
+    margin:  0 auto;
+    overflow: hidden;
+    padding: 70px 0;
+    background: rgb(40, 40, 40);
+    border-radius: 10px;
+}
+aside img {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+.AntiCopy {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(35, 35, 35);
+}
+.liw {
+  float: right;
+}
+.liw a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.liw a:hover {
+  background-color: #111;
+}
