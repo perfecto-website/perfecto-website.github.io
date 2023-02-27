@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html>
- <head>
+    <head>
         <link rel="shortcut icon" href="https://perfecto-website.github.io/images/Icon1.jpg" type="image/png">
-        <title>PERFECTO GAME</title>
+        <title>PERFECTO GAME 2023</title>
     </head>
     <div id="game">
-        <p style="text-align: center;"><h1>Flappy Putns</h1></p>
+        <p style="text-align: center;"><h1>Mana Pirmā Spēle</h1></p><p style="text-align: center; color: #26ff00;">-------------[Flappy Putns]-------------</p>
         <div id="game-area">
             <div id="bird"></div>
             <div class="pole" id="pole-1"></div>
             <div class="pole" id="pole-2"></div>
         </div>
         <div id="game-info">
-            <p>Rekords:<span id="score">0</span></p>
+            <p>Tavs Rekords:<span id="score">0</span></p>
             <button id="restart-btn">Sākt no jauna</button>
-            <p>ātrums:<span id="speed">2</span></p>
+            <p>Putna ātrums:<span id="speed">2</span></p>
             <body bgcolor="#8a8a8a" text="white"></body>
         </div>
     </div>
@@ -29,8 +29,8 @@
             position: relative;
             width: 650px;
             height: 350px;
-            border: 2px solid rgb(236, 236, 236);
-            background-color: rgb(255, 255, 255);
+            border: 2px solid rgb(255, 255, 255);
+            background-color: rgb(78, 78, 78);
             overflow: hidden;
             border-radius: 10px;
         }
@@ -50,7 +50,7 @@
             position: absolute;
             height: 109px;
             width: 30px;
-            background-color: rgb(62, 62, 62);
+            background-color: rgb(255, 179, 0);
             right: 2px;
         }
 
@@ -83,7 +83,7 @@
         }
     </style>
     <script>
-        // Save DOM objects to variables
+        // visa projekta mainīgie (ceļi*)--------------------------переменные всего проекта (пути*)
         const bird = document.querySelector( '#bird' );
         const poles = document.querySelectorAll( '.pole' );
         const pole1 = document.querySelector( '#pole-1' );
@@ -100,10 +100,10 @@
         let playing;
         let scoreUpdated;
 
+        // spēles restartēšanas poga--------------------------кнопка перезапуска игры
         function restart() {
-            // Remove event listener to avoid multiple restarts.
             restartBtn.removeEventListener( 'click', restart );
-            speed = 1;
+            speed = 2;
             score = 0;
             scoreUpdated = false;
             flapping = false;
@@ -118,32 +118,24 @@
         }
 
         function update() {
-            // Move poles
-            // check on SO if/why we need such a wordy method.
+            // Mainiet šķēršļu atrašanās vietu, pievienojiet punktus, lai pabeigtu šķēršļus--------------------------изменить расположение препятствий, добавить получения баллов за прохождение препятствия
             let polesCurrentPos = parseFloat( window.getComputedStyle( poles[0] ).getPropertyValue( "right" ) );
-
-            // Update score
-            if ( polesCurrentPos > containerWidth * 0.85 ) { // or whatever bird pos is.
+            if ( polesCurrentPos > containerWidth * 0.85 ) {
             if ( !scoreUpdated ) {
                 score += 1;
                 scoreUpdated = true;
             }
             scoreSpan.textContent = score;
         }
-
-        //  Check whether the poles went putside of game area.
+            // šķēršļu vietas ģenerēšana--------------------------генерация места препятствий
+            // Platums-šķēršļu augstums--------------------------ширина-высота препятствий
+            // ātrums šķēršļu radīšana--------------------------скорость создание препятствий
         if ( polesCurrentPos > containerWidth ) {
 
-            // Generate new poles. 
             let newHeight = parseInt( Math.random() * 100 );
-             // Change the poles' height
             pole1.style.height = 100 + newHeight + "px";
             pole2.style.height = 100 - newHeight + "px";
-
-            // Move poles back to the right-hand side of game area.
-            polesCurrentPos = 0; // This is based on the "right" property.
-
-            // Update speed
+            polesCurrentPos = 0;
             speed += 0.25;
             speedSpan.textContent = parseInt( speed );
             scoreUpdated = false;
@@ -153,14 +145,15 @@
             pole.style.right = polesCurrentPos + speed + "px";
         });
 
-        // Move bird
+        // pielāgojiet putna kustības peles klikšķa ātrumu-jutību--------------------------настроить скорость-чувствительность нажатия на мышку движения птицы
+        // putnu sadursmju pārbaude par šķērsli--------------------------проверка столкновений птицы на препятствие
         let birdTop = parseFloat( window.getComputedStyle( bird ).getPropertyValue( "top" ) );
         if ( flapping ) {
-            bird.style.top = birdTop + -2 + "px";
+            bird.style.top = birdTop + -1 + "px";
         } else if ( birdTop < containerHeight - bird.clientHeight ) {
-            bird.style.top = birdTop + 2 + "px";
+            bird.style.top = birdTop + 1 + "px";
         }
-            // Check for collisions
+            
         if ( collision( bird, pole1 ) || collision( bird, pole2 ) || birdTop <= 0 || birdTop > containerHeight - bird.clientHeight ) {
             gameOver();
         }
@@ -179,10 +172,8 @@
         }
 
         function collision( gameDiv1, gameDiv2 ) {
-            // Get the top left coords of the first div
             let left1 = gameDiv1.getBoundingClientRect().left;
             let top1 = gameDiv1.getBoundingClientRect().top;
-            // Get the dimensions of the first div
             let height1 = gameDiv1.clientHeight;
             let width1 = gameDiv1.clientWidth;
             let bottom1 = top1 + height1;
@@ -197,13 +188,13 @@
             return false;
             return true;
         }
-        // Start flapping with mousedown
+        // par peles darbībām--------------------------задействия мыши
+        // ne par peles darbībām--------------------------не задействия мыши
         gameArea.addEventListener( "mousedown", function ( e ) {
             if ( playing ) {
                 flapping = true;
             }
         });
-        // stop flapping with mousedown
         gameArea.addEventListener( "mouseup", function ( e ) {
             if ( playing ) {
                 flapping = false;
