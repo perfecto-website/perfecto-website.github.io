@@ -59,7 +59,7 @@ div {
 }
 a1 {
   display: inline-block;
-  background: linear-gradient(to bottom,#D52B1E 33%, #ffffff 34%,#ffffff 66%,#D52B1E 67%);
+  background: linear-gradient(to bottom,#851111 33%, #ffffff 34%,#ffffff 66%,#851111 67%);
   animation: 1s flag infinite ease-in-out both;
   animation-delay: calc(var(--n) * 0.05s);
   height: 60px;
@@ -79,6 +79,7 @@ aside img {
     display: block;
     width: 60%;
     margin: 0 auto;
+    -webkit-user-drag: none;
 }
 footer p {
     color:  #fff;
@@ -287,3 +288,12 @@ a.button1 {
     font-family: Avenir;
     text-align: center;
   }
+  .discordstatus {
+    display: block;
+    height: 195px;
+    margin: auto;
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    width: 400px
+}
