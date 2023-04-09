@@ -48,7 +48,7 @@ h3 {
     font-family: Gill Sans, sans-serif;
     font-variant: small-caps
 }
-body{max-width: 105%}
+body{max-width: 100%}
 div {
     width: 1290px;
     margin:  0 auto;
@@ -130,6 +130,12 @@ a.button1 {
     background: rgb(44, 44, 44);
     box-shadow: 0 -3px rgb(242, 0, 255) inset;
     transition: 0.2s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   a.button7:hover { background: rgb(46, 46, 46); }
   a.button7:active {
@@ -147,6 +153,12 @@ a.button1 {
     background: rgb(44, 44, 44);
     box-shadow: 0 -3px rgb(0, 81, 255) inset;
     transition: 0.2s;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
   a.button7:hover { background: rgb(46, 46, 46); }
   a.button7:active {
@@ -200,7 +212,8 @@ a.button1 {
   }
   .button:active.purple {
     background: #8f4bab;
-  }@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css');
+  }
+  @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css');
   @import url('https://fonts.googleapis.com/css?family=Roboto');
   
   .button {
@@ -247,46 +260,6 @@ a.button1 {
   }
   .button:active.purple {
     background: #8f4bab;
-  }
-
-
-
-
-
-  .tooltip-text {
-    position: absolute;
-    top: -44px;
-    left: +5%;
-    z-index: 2;
-    width: 540px;
-    color: white;
-    text-align: left;
-    font-size: 12px;
-    background-color: rgb(32, 32, 32);
-    border-radius: 10px;
-    padding: 10px 15px 10px 15px;
-  }
-  
-  #fade {
-    opacity: 0;
-    transition: opacity 0.5s;
-  }
-  
-  #delay {
-    opacity: 0;
-    transition: opacity 0.2s;
-    transition-delay: 1s;
-  }
-  
-  .hover-text:hover #fade { opacity: 1; }
-  .hover-text:hover #delay { opacity: 1; }
-  
-  
-  .hover-text {
-    position: relative;
-    display: inline-block;
-    font-family: Avenir;
-    text-align: center;
   }
   .discordstatus {
     display: block;
