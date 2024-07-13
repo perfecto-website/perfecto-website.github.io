@@ -1,0 +1,69 @@
+:root {
+  --back-color: rgb(207, 207, 207);
+  --header-back: rgb(207, 207, 207);
+  --header-text: #eee;
+  --header-back1: rgb(131, 131, 131);
+  --header-back2: rgb(207, 207, 207);
+}
+body {
+  background-color: var(--back-color);
+  color: var(--primary-color);
+}
+
+header {
+  background-color: var(--header-back);
+  color: var(--header-text);
+}
+
+div, section {
+  background-color: var(--header-back1);
+}
+
+.pricing {
+  background-color: var(--header-back);
+}
+
+.pricing .card .content {
+  background-color: var(--header-back1);
+}
+.pricing .card {
+  background-color: var(--header-back1);
+}
+.pricing .card:hover {
+  background-color: var(--header-back1);
+}
+
+.pricing .card p{
+  color: #eee;
+}
+.pricing .card h4{
+  color: #ffffff;
+}
+.pricing .card button{
+  color: #ffffff;
+}
+p1{
+  color: #ffffff;
+}
+p {
+  color: #ffffff;
+}
+.drisnja2{
+  background-color: rgb(177, 177, 177);
+  color: #464646;
+}
+.footer1232{
+  border-bottom: 5px solid #00ff0d;
+  background: rgb(184, 184, 184);
+}
+
+.myDIV {
+  background-color: rgb(160, 160, 160);
+  color: rgb(255, 255, 255);
+}
+.myDIV:hover {
+  background-color: rgb(170, 170, 170);
+}
+.skewed{
+  background: rgb(170, 170, 170);
+}

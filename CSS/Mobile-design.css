@@ -1,0 +1,64 @@
+@media screen and (max-width: 481px) {
+
+    #beginning{
+        text-align: center;
+        padding:10%;
+        height: 500px;
+        width: 1300px;
+    }
+    #myDIV12 {
+        width: 300px;
+        height: 360px;
+        position: fixed;
+        right: 1065px; top: 10px;
+        padding: 9px;
+        color: #a221f8;
+        border-radius: 5px;
+        font: bold 15px Helvetica, Arial, sans-serif;
+        font-size: 1px;
+    }
+    #hhhhhh{
+        margin-top: 110px;
+    }
+    #hhhhhh1{
+        margin-top: 20px;
+    }
+    #hhhhhh2{
+        margin-top: 45px;
+        text-align: center;
+    }
+    .zzzzzz{
+        margin-right: 20px;
+    }
+    .zzzzzz1{
+        margin-left: 50px;
+    }
+    #imegehide{
+        display: none;
+    }
+    .imegehide1{
+        visibility: hidden;
+    }
+    .hide1{
+        visibility: hidden;
+    }
+    .widthLin{
+        width: 1380px;
+    }
+    #widthLin1{
+        width: 1380px;
+    }
+    .text111{
+        margin-left: 400px;
+        height: 60px;
+        width: 600px;
+    }
+    .text222{
+        margin-left: 400px;
+        height: 60px;
+        width: 600px;
+    }
+    .divleft{
+        margin-left: 45px;
+    } 
+}

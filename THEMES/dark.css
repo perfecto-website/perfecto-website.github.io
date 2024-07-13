@@ -1,0 +1,17 @@
+:root {
+  --back-color: rgb(27, 27, 27);
+  --header-back1: rgb(32, 32, 32);
+}
+
+body {
+  background-color: var(--back-color);
+}
+header{
+  background-color: var(--header-back);
+}
+div {
+  background-color: var(--header-back1);
+}
+.skewed{
+  background: rgb(27, 27, 27);
+}
